@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Server Auth</title>
+    <link rel="stylesheet" href="./mvp.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer></script>
+
+  </head>
+  <body>
+    <main>
+      <section>
+        <form id="login">
+          <label>Login</label>
+          <input type="text" name="login" />
+          <label>Password</label>
+          <input type="password" name="password" />
+          <button>Log in</button>
+        </form>
+      </section>
+
+      <script>
+        window.addEventListener("DOMContentLoaded", () => {
+
+          document
+            .getElementById("login")
+            .addEventListener("submit", (event) => {
+              event.preventDefault();
+            });
+
+        });
+      </script>
+    </main>
+  </body>
+</html>
