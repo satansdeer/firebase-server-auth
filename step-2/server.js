@@ -42,7 +42,8 @@ app.get("/profile", function (req, res) {
   admin
     .auth()
     .verifySessionCookie(sessionCookie, true /** checkRevoked */)
-    .then(() => {
+    .then((userData) => {
+      console.log("Logged in:", userData.email)
       res.render("profile.html");
     })
     .catch((error) => {
